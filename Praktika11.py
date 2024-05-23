@@ -60,7 +60,7 @@ if __name__ == '__main__':
     print('Was NaN value----------',data['User_Score'].isna().sum())
     data['User_Score'] = data['User_Score'].replace('tbd', np.NaN)
     data['User_Score'] = data['User_Score'].astype('float64')
-    print('Now NaN value----------',data['User_Score'].isna().sum())
+    print('Now NaN value----------', data['User_Score'].isna().sum())
     data['User_Score'] = data['User_Score'].replace(np.NaN, 'Unknown')
     #Add new Column with Sum Sales
     data['Sum_Sales'] = data['NA_sales'] + data['EU_sales'] + data['JP_sales'] + data['Other_sales']
